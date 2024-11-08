@@ -1,13 +1,36 @@
 import Carousel from 'react-bootstrap/Carousel';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 
 function CarouselFadeExample() {
+
+
+  useGSAP(
+    () => {
+        // gsap code here...
+        gsap.from("p", { 
+
+        opacity:0,
+        y:-30,
+        delay:1,
+        duration:1
+
+
+
+         }); 
+         
+         
+       
+    }
+);
+
   return (
     <Carousel fade>
       <Carousel.Item>
         <img className="h-screen w-screen" src="https://images.unsplash.com/photo-1491677533189-49af044391ed?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
         <Carousel.Caption className="top-32 md:top-1/2">
-                    <p className="text-3xl md:text-4xl font-extrabold">The sun's energy is endless—let’s harness it to power a sustainable future for generations to come</p>
+        <p className="text-3xl md:text-4xl font-extrabold">The sun's energy is endless—let’s harness it to power a sustainable future for generations to come</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

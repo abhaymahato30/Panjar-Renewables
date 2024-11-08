@@ -1,0 +1,33 @@
+/* Basic Styling for About Section */
+.about-section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    opacity: 0; /* Initially hidden, can be animated in later */
+  }
+  
+  .about-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0; /* Start with 0 opacity for fade-in effect */
+    transform: translateY(50px); /* Start slightly lower than final position */
+    margin-bottom: 20px;
+    transition: all 0.3s ease-out;
+  }
+  

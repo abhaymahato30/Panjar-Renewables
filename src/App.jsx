@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <main>
         <Routes>
-          <Route path="/home" element={<Home/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/about" element={<div className="p-6">About Page</div>} />
           <Route path="/contact" element={<div className="p-6">Contact Page</div>} />
         </Routes>

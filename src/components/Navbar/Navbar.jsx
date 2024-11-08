@@ -1,40 +1,87 @@
 // src/components/Navbar.js
-import { useState } from "react";
-import { Link } from "react-router-dom"; // Assuming you are using React Router
+import { useRef, useState } from "react";
+import { Link } from 'react-scroll' 
 import logo1 from "../../assets/general/Logo1.png"
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Toggle mobile menu visibility
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+const container1 = useRef();
+const links = document.querySelectorAll('.link');
+
+
+
+  useGSAP(
+    () => {
+        // gsap code here...
+        gsap.from("nav img", { 
+
+        opacity:0,
+        y:-30,
+        delay:2,
+        duration:2
+
+
+
+         }); 
+         
+         
+       
+    }
+); // <-- scope is for selector text (optional)
 
   return (
     <header className="bg-white z-20 fixed ">
       <nav className="w-screen mx-auto px-16 py-0 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src={logo1} alt="Logo" className="w-16 h-16 " />
+          <img src={logo1} alt="Logo" className="w-16 h-16 logo" />
           {/* <span className="text-white text-2xl font-bold">panjar Ren</span> */}
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex space-x-10">
+        <div ref={container1} className="hidden md:flex space-x-10">
           <Link
-            to="/home"
-            className="text-cyan-950 font-medium text-base hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className="text-cyan-950 font-medium text-base hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+            to="about" 
+            smooth={true} 
+            duration={300}
+            className="hover:text-blue-400 cursor-pointer"
           >
             About
           </Link>
           <Link
-            to="/contact"
-            className="text-cyan-950 font-medium text-base hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+            to="team" 
+            smooth={true} 
+            duration={300}
+            className="hover:text-blue-400 cursor-pointer"
+          >
+            Team
+          </Link>
+          <Link
+          to="products"
+           smooth={true} 
+           duration={300}
+           className="hover:text-blue-400 cursor-pointer"
+          >
+            Products
+          </Link>
+          <Link
+          to="reviews"
+           smooth={true} 
+           duration={300}
+           className="hover:text-blue-400 cursor-pointer"
+          >
+            Reviews
+          </Link>
+          <Link
+          to="contact"
+           smooth={true} 
+           duration={300}
+           className="hover:text-blue-400 cursor-pointer"
           >
             Contact
           </Link>
@@ -42,7 +89,7 @@ function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-emerald-950"
+          className="md:hidden text-emerald-950"animated-
           onClick={toggleMobileMenu}
         >
           <svg
@@ -68,19 +115,19 @@ function Navbar() {
       >
         <Link
           to="/home"
-          className="text-cyan-950 text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          className="text-cyan-950 animated-link text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
         >
           Home
         </Link>
         <Link
           to="/about"
-          className="text-cyan-950 text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          className="text-cyan-950 animated-link text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
         >
           About
         </Link>
         <Link
           to="/contact"
-          className="text-cyan-950 text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          className="text-cyan-950 animated-link text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
         >
           Contact
         </Link>

@@ -1,5 +1,7 @@
 import { useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 function HeroTwo() {
   const ref = useRef(null); // Ref for canvas
@@ -52,6 +54,13 @@ function HeroTwo() {
     window.addEventListener('resize', handleResize);
 
     // Clean up on unmount
+
+
+
+
+
+
+    
     return () => {
       window.removeEventListener('resize', handleResize);
     };

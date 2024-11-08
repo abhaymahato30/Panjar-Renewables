@@ -5,7 +5,12 @@ import 'swiper/css';
 import { useRef } from 'react';
 import HeroOne from "../components/HeroOne"
 import Footer from '../components/Footer/Footer';
-import HeroTwo from '../components/HeroTwo';
+// import HeroTwo from '../components/HeroTwo';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import About from '../components/About/About';
+import Team from '../components/Team/Team'
+import Contact from '../components/Contact';
 
 function Home() {
   // Animations for sections
@@ -36,17 +41,49 @@ function Home() {
     }
   };
 
+  // gsap
+  useGSAP(
+    () => {
+        // gsap code here...
+        
+         
+  // var tl2 =gsap.timeline({
+  //   scrollTrigger:{
+  //     trigger:"section2",
+  //     scroller:"body",
+  //     markers:true,
+  //     start:"top 50%",
+  //     end:"top 0",
+  //     scrub:2
+
+  //   }
+  // })
+  // tl2.from(".services",{
+  //   x:-300,
+  //   opacity:0
+
+  // });
+
+         
+       
+    }
+);
+
+
+
+
+
 
   return (
     <div className="bg-gray-50">
 
         {/* Hero section 1 */}
         <HeroOne/>
-        <HeroTwo/>
+        {/* <HeroTwo/> */}
     
       {/* Hero Section */}
-      <section className="h-screen bg-blue-600 text-white flex items-center justify-center px-4">
-        <animated.div style={heroAnimation} className="text-center max-w-3xl">
+      <section className="section2 h-screen bg-cyan-950  text-white flex items-center justify-center px-4">
+        <animated.div style={heroAnimation} className="services text-center max-w-3xl">
           <h1 className="text-5xl font-extrabold">Welcome to Our Amazing Products</h1>
           <p className="mt-4 text-lg">We offer the best products to take your business to the next level. Discover what we have to offer!</p>
           <button className="mt-6 px-6 py-2 bg-yellow-500 text-gray-900 rounded-full hover:bg-yellow-400 transition-all duration-300">
@@ -55,8 +92,15 @@ function Home() {
         </animated.div>
       </section>
 
+      {/* About Section */}
+      <section id="about">
+      <About/>
+
+      </section>
+
+
       {/* Product Section */}
-      <section className="py-16 px-4">
+      <section id='products'  className="py-16 px-4">
         <animated.div style={productAnimation} className="text-center">
           <h2 className="text-4xl font-bold text-blue-600">Our Products</h2>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -125,7 +169,7 @@ function Home() {
       </section>
 
       {/* Reviews Section */}
-      <section className="py-16 px-4">
+      <section id='reviews' className="py-16 px-4">
         <animated.div style={reviewAnimation} className="text-center">
           <h2 className="text-4xl font-bold text-blue-600">Our Reviews</h2>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -179,6 +223,15 @@ function Home() {
             </div>
           </div>
         </animated.div>
+      </section>
+
+      {/* Team section */}
+      <section id="team" >
+      
+      
+      <Team/>
+         
+
       </section>
 
       <div className="bg-gray-50 ">
@@ -254,9 +307,17 @@ function Home() {
         </animated.div>
       </section>
     </div>
+    {/* contact section  */}
+    <section id='contact'>
+
+      <Contact/>
+    </section>
 
  {/* footer */}
+ <section>
  <Footer/>
+
+ </section>
 
     </div>
   );
