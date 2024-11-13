@@ -24,7 +24,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0",
     "react-scroll": "^1.9.0",
-    "swiper": "^11.1.14"
+    "react-spring": "^9.7.4",
+    "swiper": "^10.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

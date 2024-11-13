@@ -2,8 +2,9 @@
 import { useSpring, animated } from '@react-spring/web';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { useRef } from 'react';
-import HeroOne from "../components/HeroOne"
+import { useRef ,useState} from 'react';
+// import HeroOne from "../components/HeroOne"
+import HeroSection from '../components/HeroSection';
 import Footer from '../components/Footer/Footer';
 // import HeroTwo from '../components/HeroTwo';
 import { useGSAP } from '@gsap/react';
@@ -17,7 +18,7 @@ import FAQ from '../components/Faq';
 import Gallery from '../components/Gallery'
 import Review from '../components/Review';
 import PastWorks from '../components/Pastworks';
-
+import GalleryComponent from '../components/GalleryComponent'
 
 
 
@@ -60,21 +61,18 @@ function Home() {
   const swiperRef = useRef(null);
 
   // Animations for sections
-  const galleryAnimation = useSpring({ opacity: 1, transform: 'translateY(0)', from: { opacity: 0, transform: 'translateY(20px)' }, config: { duration: 1000, delay: 1000 } });
 
   // Function to go to next slide
-  const goToNextSlide = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slideNext();
-    }
-  };
+  const [swiper, setSwiper] = useState(null);
 
-  // Function to go to previous slide
-  const goToPrevSlide = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slidePrev();
-    }
-  };
+  const galleryAnimation = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { tension: 170, friction: 26 },
+  });
+
+  const goToPrevSlide = () => swiper?.slidePrev();
+  const goToNextSlide = () => swiper?.slideNext();
 
   // gsap
   useGSAP(
@@ -113,19 +111,12 @@ function Home() {
     <div className="bg-gray-50">
 
         {/* Hero section 1 */}
-        <HeroOne/>
+        {/* <HeroOne/> */}
         {/* <HeroTwo/> */}
+        <HeroSection/>
     
       {/* Hero Section */}
-      <section className="section2 h-screen bg-cyan-950  text-white flex items-center justify-center px-4">
-        <animated.div style={heroAnimation} className="services text-center max-w-3xl">
-          <h1 className="text-5xl font-extrabold">Welcome to Our Amazing Products</h1>
-          <p className="mt-4 text-lg">We offer the best products to take your business to the next level. Discover what we have to offer!</p>
-          <button className="mt-6 px-6 py-2 bg-yellow-500 text-gray-900 rounded-full hover:bg-yellow-400 transition-all duration-300">
-            Learn More
-          </button>
-        </animated.div>
-      </section>
+    
 
       {/* About Section */}
       <section id="about">
@@ -364,6 +355,65 @@ function Home() {
           <p className="mt-2 text-gray-600">A solar-powered tree structure that captures sunlight efficiently to power urban utilities like charging stations and lighting. A perfect blend of technology and nature.</p>
         </div>
       </div>
+        {/* Product Card */}
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={tree} alt="Product 11" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">SOLAR POWER BANK</h3>
+          <p className="mt-2 text-gray-600">A solar power bank is a portable,
+eco-friendly charger that uses
+solar energy to recharge its
+battery, ideal for off-grid use. It
+often includes high-efficiency
+panels, a durable casing, and
+features like fast charging and
+LED lights.</p>
+        </div>
+      </div>  {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={tree} alt="Product 11" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">SOLAR SPRAYER</h3>
+          <p className="mt-2 text-gray-600">A solar fertilizer sprayer is an
+eco-friendly agricultural tool
+powered by solar energy,
+designed to spray fertilizers or
+pesticides efficiently across
+crops. It reduces fuel costs,
+minimizes emissions, and ensures
+consistent spraying with minimal
+environmental impact</p>
+        </div>
+      </div>  {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={tree} alt="Product 11" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">SMART BENCH</h3>
+          <p className="mt-2 text-gray-600">A solar smart bench is an
+outdoor seating solution
+equipped with solar panels to
+power USB charging ports, Wi-Fi,
+and lighting. It provides a
+sustainable, eco-friendly way for
+users to recharge devices and
+access connectivity in public
+spaces</p>
+        </div>
+      </div>  {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={tree} alt="Product 11" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">SOLAR INSECT TRAP</h3>
+          <p className="mt-2 text-gray-600">The Solar Insect Trap uses solar
+power to attract and capture
+harmful insects, protecting crops
+without the use of chemicals.
+Ideal for sustainable farming, it
+reduces pest damage while being
+environmentally friendly and
+cost-effective</p>
+        </div>
+      </div>
     </div>
   </animated.div>
 </section>
@@ -395,88 +445,39 @@ function Home() {
 
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <section id="gallery" >
+=======
+      <section id="recoginition" >
+>>>>>>> a1987f7 (add gallery section)
       
       
       <Gallery/>
          
 
       </section>
+<<<<<<< HEAD
 >>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
+=======
+      <section id="gallery" >
+      
+      
+      <GalleryComponent
+           galleryAnimation={galleryAnimation}
+           goToPrevSlide={goToPrevSlide}
+           goToNextSlide={goToNextSlide}
+      
+      
+      />
+         
+
+      </section>
+>>>>>>> a1987f7 (add gallery section)
 
       <div className="bg-gray-50 ">
       {/* Gallery Section */}
-      <section className="py-16 px-4 bg-white">
-        <animated.div style={galleryAnimation} className="text-center">
-          <h2 className="text-4xl font-bold text-blue-600">Our Gallery</h2>
-
-          {/* Swiper Carousel */}
-          <div className="relative mt-8">
-            <Swiper
-              ref={swiperRef}
-              spaceBetween={10}
-              slidesPerView={1}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                },
-                1024: {
-                  slidesPerView: 3,
-                },
-              }}
-              navigation={false} // We will use custom navigation controls
-              pagination={{ clickable: true }}
-              loop={true}  // Makes the carousel loop
-              autoplay={{
-                delay: 3000, // 3 seconds for each slide
-                disableOnInteraction: false, // Keeps autoplay active after user interaction
-              }}
-              className="my-swiper"
-            >
-              <SwiperSlide>
-                <img src="https://plus.unsplash.com/premium_photo-1701207573585-3ac478804b2d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gallery 1" className="w-full h-64 object-cover rounded-lg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://images.unsplash.com/photo-1730871083804-ceaeb8c08e79?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gallery 2" className="w-full h-64 object-cover rounded-lg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://plus.unsplash.com/premium_photo-1701207573585-3ac478804b2d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gallery 3" className="w-full h-64 object-cover rounded-lg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://images.unsplash.com/photo-1730871083804-ceaeb8c08e79?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gallery 4" className="w-full h-64 object-cover rounded-lg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://plus.unsplash.com/premium_photo-1701207573585-3ac478804b2d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gallery 5" className="w-full h-64 object-cover rounded-lg" />
-              </SwiperSlide>
-            </Swiper>
-
-            {/* Custom Navigation Controls */}
-            <div className="absolute top-1/2 z-10 left-0 transform -translate-y-1/2 pl-4">
-              <button
-                onClick={goToPrevSlide}
-                className="text-white bg-blue-600 hover:bg-blue-700 p-2 rounded-full shadow-lg"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="absolute top-1/2 z-10 right-0 transform -translate-y-1/2 pr-4">
-              <button
-                onClick={goToNextSlide}
-                className="text-white bg-blue-600 hover:bg-blue-700 p-2 rounded-full shadow-lg"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-        </animated.div>
-      </section>
+    
     </div>
     {/* contact section  */}
     <section id='contact'>
