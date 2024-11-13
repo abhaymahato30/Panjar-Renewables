@@ -12,8 +12,6 @@ import gsap from 'gsap';
 import About from '../components/About/About';
 import Team from '../components/Team/Team'
 import Contact from '../components/Contact';
-<<<<<<< HEAD
-=======
 import FAQ from '../components/Faq';
 import Gallery from '../components/Gallery'
 import Review from '../components/Review';
@@ -46,7 +44,6 @@ import tree from '../assets/products/tree.jpg'
 
 
 
->>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
 
 function Home() {
   // Animations for sections
@@ -126,133 +123,6 @@ function Home() {
 
 
       {/* Product Section */}
-<<<<<<< HEAD
-      <section id='products'  className="py-16 px-4">
-        <animated.div style={productAnimation} className="text-center">
-          <h2 className="text-4xl font-bold text-blue-600">Our Products</h2>
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col">
-              <img src="https://imgs.search.brave.com/jcxW3npRY4xurWPBkQaT9Djx-QUvq9_GxNUOsAIEXLs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ4/NjgyMzI0My92ZWN0/b3Ivc29sYXItb3Zl/bi1pY29uLWluLXZl/Y3Rvci1sb2dvdHlw/ZS5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9MjhXaGNMWTZM/ZkFzb2pfTnBRZjNK/QjI2b3d2bjlKVjZ5/VlRNN2p4Q09aUT0" alt="Product 1" className="w-80 h-80 " />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">Product 1</h3>
-                <p className="mt-2 text-gray-600">Amazing product that will help you achieve your goals faster!</p>
-              </div>
-            </div>
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col">
-              <img src="https://imgs.search.brave.com/5KwOLEqgwE2B2_J2c8eeMjX63JkjNAOxzUUdia5_-Wc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA0LzA5LzA1LzUy/LzM2MF9GXzQwOTA1/NTIxNF9KUG9OQkdy/dzZXamhLcVdwMVNq/NFdGUGhmSGpxTUFp/Vy5qcGc" />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">Product 2</h3>
-                <p className="mt-2 text-gray-600">Innovative design that meets your needs and expectations!</p>
-              </div>
-            </div>
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col">
-              <img src="https://imgs.search.brave.com/NVqt7fzRWZYoKqz5-WJ0gq1SjcX1YURdvHa_VENeqqw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MTY0NDcxNS92ZWN0/b3IvYXV0dW1uLXRy/ZWUtc3ltYm9sLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz02/Y2JhSnVUdmVaZVVa/TndQSXl0UjdlZEpk/aWRFV1hsaktBNzVw/MDR3U1FjPQ" alt="Product 3" className="w-80 h-80" />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">Product 3</h3>
-                <p className="mt-2 text-gray-600">The perfect product for your everyday needs.</p>
-              </div>
-            </div>
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col">
-              <img src="https://imgs.search.brave.com/jcxW3npRY4xurWPBkQaT9Djx-QUvq9_GxNUOsAIEXLs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ4/NjgyMzI0My92ZWN0/b3Ivc29sYXItb3Zl/bi1pY29uLWluLXZl/Y3Rvci1sb2dvdHlw/ZS5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9MjhXaGNMWTZM/ZkFzb2pfTnBRZjNK/QjI2b3d2bjlKVjZ5/VlRNN2p4Q09aUT0" alt="Product 1" className="w-80 h-80 " />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">Product 1</h3>
-                <p className="mt-2 text-gray-600">Amazing product that will help you achieve your goals faster!</p>
-              </div>
-            </div>
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col">
-              <img src="https://imgs.search.brave.com/5KwOLEqgwE2B2_J2c8eeMjX63JkjNAOxzUUdia5_-Wc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA0LzA5LzA1LzUy/LzM2MF9GXzQwOTA1/NTIxNF9KUG9OQkdy/dzZXamhLcVdwMVNq/NFdGUGhmSGpxTUFp/Vy5qcGc" />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">Product 2</h3>
-                <p className="mt-2 text-gray-600">Innovative design that meets your needs and expectations!</p>
-              </div>
-            </div>
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col">
-              <img src="https://imgs.search.brave.com/NVqt7fzRWZYoKqz5-WJ0gq1SjcX1YURdvHa_VENeqqw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MTY0NDcxNS92ZWN0/b3IvYXV0dW1uLXRy/ZWUtc3ltYm9sLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz02/Y2JhSnVUdmVaZVVa/TndQSXl0UjdlZEpk/aWRFV1hsaktBNzVw/MDR3U1FjPQ" alt="Product 3" className="w-80 h-80" />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">Product 3</h3>
-                <p className="mt-2 text-gray-600">The perfect product for your everyday needs.</p>
-              </div>
-            </div>
-          </div>
-        </animated.div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="bg-blue-50 py-16 px-4">
-        <animated.div style={testimonialAnimation} className="text-center">
-          <h2 className="text-4xl font-bold text-blue-600">What Our Clients Say</h2>
-          <div className="mt-8 space-y-8">
-            <div className="bg-white p-8 shadow-lg rounded-lg max-w-md mx-auto">
-              <p className="text-lg text-gray-600">"This product changed the way we do business. We saw a dramatic increase in productivity."</p>
-              <p className="text-gray-500">CEO, TechCo</p>
-            </div>
-            <div className="bg-white p-8 shadow-lg rounded-lg max-w-md mx-auto">
-              <p className="text-lg text-gray-600">"Highly recommend! The support team is incredible, and the product is easy to use."</p>
-              <h4 className="mt-4 font-semibold">Jane Smith</h4>
-              <p className="text-gray-500">Founder, DesignLab</p>
-            </div>
-          </div>
-        </animated.div>
-      </section>
-
-      {/* Reviews Section */}
-      <section id='reviews' className="py-16 px-4">
-        <animated.div style={reviewAnimation} className="text-center">
-          <h2 className="text-4xl font-bold text-blue-600">Our Reviews</h2>
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-xl font-semibold">★★★★★</h3>
-              <p className="mt-2 text-gray-600">"Amazing product! Worth every penny. Will buy again."</p>
-              <h4 className="mt-4 font-semibold">Michael Johnson</h4>
-            </div>
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-xl font-semibold">★★★★★</h3>
-              <p className="mt-2 text-gray-600">"The best product I've used in a long time. Highly recommend it to others!"</p>
-              <h4 className="mt-4 font-semibold">Sarah Lee</h4>
-            </div>
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-xl font-semibold">★★★★★</h3>
-              <p className="mt-2 text-gray-600">"Exceptional quality and excellent customer service. Very satisfied!"</p>
-              <h4 className="mt-4 font-semibold">Chris Brown</h4>
-            </div>
-          </div>
-        </animated.div>
-      </section>
-
-      {/* Past Works Section */}
-      <section className="py-16 px-4 bg-gray-100">
-        <animated.div style={pastWorksAnimation} className="text-center">
-          <h2 className="text-4xl font-bold text-blue-600">Our Past Works</h2>
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <img src="/work1.jpg" alt="Past Work 1" className="w-full h-56 object-cover" />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">Project 1</h3>
-                <p className="mt-2 text-gray-600">A description of this project and the challenges we solved.</p>
-                <a href="/projects/project1" className="mt-4 inline-block text-blue-600 hover:text-blue-500 transition-all duration-300">Learn More</a>
-              </div>
-            </div>
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <img src="/work2.jpg" alt="Past Work 2" className="w-full h-56 object-cover" />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">Project 2</h3>
-                <p className="mt-2 text-gray-600">Another example of our work. We delivered results ahead of time!</p>
-                <a href="/projects/project2" className="mt-4 inline-block text-blue-600 hover:text-blue-500 transition-all duration-300">Learn More</a>
-              </div>
-            </div>
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <img src="/work3.jpg" alt="Past Work 3" className="w-full h-56 object-cover" />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">Project 3</h3>
-                <p className="mt-2 text-gray-600">A showcase of our expertise in delivering high-quality solutions.</p>
-                <a href="/projects/project3" className="mt-4 inline-block text-blue-600 hover:text-blue-500 transition-all duration-300">Learn More</a>
-              </div>
-            </div>
-          </div>
-        </animated.div>
-      </section>
-
-=======
       <section id='products' className="py-16 px-4">
   <animated.div style={productAnimation} className="text-center">
     <h2 className="text-4xl font-bold text-blue-600">Our Products</h2>
@@ -435,7 +305,6 @@ cost-effective</p>
         <PastWorks/>
 
       </section>
->>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
       {/* Team section */}
       <section id="team" >
       
@@ -444,22 +313,13 @@ cost-effective</p>
          
 
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <section id="gallery" >
-=======
       <section id="recoginition" >
->>>>>>> a1987f7 (add gallery section)
       
       
       <Gallery/>
          
 
       </section>
-<<<<<<< HEAD
->>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
-=======
       <section id="gallery" >
       
       
@@ -473,7 +333,6 @@ cost-effective</p>
          
 
       </section>
->>>>>>> a1987f7 (add gallery section)
 
       <div className="bg-gray-50 ">
       {/* Gallery Section */}
@@ -485,12 +344,9 @@ cost-effective</p>
       <Contact/>
     </section>
 
-<<<<<<< HEAD
-=======
     {/* FAQS SECTION */}
     <FAQ/>
 
->>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
  {/* footer */}
  <section>
  <Footer/>
