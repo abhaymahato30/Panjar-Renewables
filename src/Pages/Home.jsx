@@ -15,7 +15,7 @@ import Contact from '../components/Contact';
 import FAQ from '../components/Faq';
 import Gallery from '../components/Gallery'
 import Review from '../components/Review';
-import PastWorks from '../components/Pastworks';
+import PastWorks from '../components/PastWorks';
 import GalleryComponent from '../components/GalleryComponent'
 
 
