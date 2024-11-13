@@ -6,6 +6,10 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
+<<<<<<< HEAD
+=======
+import { Link } from "react-scroll";
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
 
 const Footer = () => {
   return (
@@ -38,6 +42,7 @@ const Footer = () => {
               className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
               style={{ width: "70px" }}
             />
+<<<<<<< HEAD
             <p>
               <a href="/home">Home</a>
             </p>
@@ -50,6 +55,56 @@ const Footer = () => {
             <p>
               <a href="/contactus">ContactUs</a>
             </p>
+=======
+             <Link
+          to="/home"
+          className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+        >
+          Home
+        </Link>
+      
+    
+        <Link
+            to="about" 
+            smooth={true} 
+            duration={300}
+            className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          >
+            About
+          </Link>
+          <Link
+            to="team" 
+            smooth={true} 
+            duration={300}
+            className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          >
+            Team
+          </Link>
+          <Link
+          to="products"
+           smooth={true} 
+           duration={300}
+           className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          >
+            Products
+          </Link>
+          <Link
+          to="reviews"
+           smooth={true} 
+           duration={300}
+           className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          >
+            Reviews
+          </Link>
+          <Link
+          to="contact"
+           smooth={true} 
+           duration={300}
+           className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          >
+            Contact
+          </Link>
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
           </div>
           <hr className="clearfix w-100 d-md-none" />
 
@@ -60,7 +115,15 @@ const Footer = () => {
               className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
               style={{ width: "60px" }}
             />
+<<<<<<< HEAD
             <p> B I T SINDRI DHANBAD </p>
+=======
+            <p> 97/D, Usha Siddhi Kunj Vardhman Compound Lalpur, Ranchi, Jharkhand-834001
+
+             BIT Sindri Dhanbad, Jharkhand JUT Namkum Ranchi, Jharkhand </p>
+             <p>+91 9430649460</p>
+             <p>Panjarrenewables@gmail.com</p>
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
           </div>
         </div>
       </div>
@@ -72,13 +135,18 @@ const Footer = () => {
         </li>
         <li className="list-inline-item">
           <a
+<<<<<<< HEAD
             href="https://www.facebook.com/acebitsindri"
+=======
+            href="https://www.facebook.com/panjarrenewables?mibextid=ZbWKwL"
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
             className="btn btn-outline-danger btn-rounded"
             title="Facebook"
           >
             <FontAwesomeIcon icon={faFacebook} />
           </a>
         </li>
+<<<<<<< HEAD
         <li className="list-inline-item">
           <a
             href="https://twitter.com/AceSindri/"
@@ -91,6 +159,12 @@ const Footer = () => {
         <li className="list-inline-item">
           <a
             href="https://www.instagram.com/acebitsindri/"
+=======
+       
+        <li className="list-inline-item">
+          <a
+            href="https://www.instagram.com/panjar_renewables/?utm_source=qr&igsh=ZTRjaGo1MzVobGR5"
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
             className="btn btn-outline-danger btn-rounded"
             title="Instagram"
           >
@@ -99,7 +173,11 @@ const Footer = () => {
         </li>
         <li className="list-inline-item">
           <a
+<<<<<<< HEAD
             href="https://www.linkedin.com/in/ace-bit-sindri-82b557222/"
+=======
+            href="https://www.linkedin.com/company/panjar-renewables/"
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
             className="btn btn-outline-danger btn-rounded"
             title="linkedin"
           >
@@ -110,7 +188,11 @@ const Footer = () => {
       <hr />
       {/* Copyright */}
       <div className="footer-copyright text-center py-3">
+<<<<<<< HEAD
         all copyright are reserved @Panjar Renewables
+=======
+        All copyright are reserved @Panjar Renewables
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
       </div>
     </footer>
   );

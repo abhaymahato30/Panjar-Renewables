@@ -11,6 +11,41 @@ import gsap from 'gsap';
 import About from '../components/About/About';
 import Team from '../components/Team/Team'
 import Contact from '../components/Contact';
+<<<<<<< HEAD
+=======
+import FAQ from '../components/Faq';
+import Gallery from '../components/Gallery'
+import Review from '../components/Review';
+import PastWorks from '../components/Pastworks';
+
+
+
+
+
+
+
+
+
+
+// import images 
+import cooker from '../assets/products/cooker.jpg'
+import dcsystem from '../assets/products/dcsystem.jpg'
+import distilator from '../assets/products/distilator.jpg'
+import dryer from '../assets/products/dryer.jpg'
+import eycycle from '../assets/products/eycycle.jpg'
+
+import grasscutter from '../assets/products/grasscutter.jpg'
+import hat from '../assets/products/hat.jpg'
+import lawngrass from '../assets/products/lawngrass.jpg'
+import powersource from '../assets/products/powersource.jpg'
+import tent from '../assets/products/tent.jpg'
+import tree from '../assets/products/tree.jpg'
+
+
+
+
+
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
 
 function Home() {
   // Animations for sections
@@ -100,6 +135,7 @@ function Home() {
 
 
       {/* Product Section */}
+<<<<<<< HEAD
       <section id='products'  className="py-16 px-4">
         <animated.div style={productAnimation} className="text-center">
           <h2 className="text-4xl font-bold text-blue-600">Our Products</h2>
@@ -225,6 +261,131 @@ function Home() {
         </animated.div>
       </section>
 
+=======
+      <section id='products' className="py-16 px-4">
+  <animated.div style={productAnimation} className="text-center">
+    <h2 className="text-4xl font-bold text-blue-600">Our Products</h2>
+    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={cooker} alt="Product 1" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">SOLAR COOKER</h3>
+          <p className="mt-2 text-gray-600">A solar-powered cooker ideal for use in rural and off-grid areas to reduce dependency on traditional fuels.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={distilator} alt="Product 2" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">SOLAR DISTILLATOR</h3>
+          <p className="mt-2 text-gray-600">A solar distiller designed to optimize sunlight for herb and distilled water extraction, ideal for small-scale industries.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={dryer} alt="Product 3" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">HYBRID SOLAR DRYER</h3>
+          <p className="mt-2 text-gray-600">A solar-powered dryer for efficiently processing farm produce, reducing spoilage and enhancing quality.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={hat} alt="Product 4" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">SOLAR CAP</h3>
+          <p className="mt-2 text-gray-600">The Solar Cap is a wearable, solar-powered accessory equipped with small panels that charge devices on the go. Perfect for outdoor activities, it combines convenience with sustainable energy.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={dcsystem} alt="Product 5" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">DC SOLAR SYSTEM</h3>
+          <p className="mt-2 text-gray-600">A small solar lamp, compact, portable, and ideal for indoor or outdoor use. It charges during the day and provides eco-friendly illumination at night.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={eycycle} alt="Product 6" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">EV CYCLE</h3>
+          <p className="mt-2 text-gray-600">An eco-friendly electric cycle powered by solar energy, designed for efficient and sustainable personal transportation.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={lawngrass} alt="Product 7" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">LAWN GRASS CUTTER</h3>
+          <p className="mt-2 text-gray-600">A compact, solar-powered lawn cutter ideal for small to medium-sized lawns. It provides an eco-friendly solution for lawn maintenance.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={powersource} alt="Product 8" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">POWER SOURCE</h3>
+          <p className="mt-2 text-gray-600">A solar energy source designed to power various farm and industrial tools like pumps and machinery.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={grasscutter} alt="Product 9" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">HAND HELD GRASS CUTTER</h3>
+          <p className="mt-2 text-gray-600">A robust, solar-powered tool for larger lawns and tougher vegetation. Its ergonomic design ensures easy handling, providing an eco-friendly landscaping solution.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={tent} alt="Product 10" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">SOLAR TENT</h3>
+          <p className="mt-2 text-gray-600">An eco-friendly shelter equipped with solar panels to generate power for lighting and charging small devices. Perfect for camping and off-grid use.</p>
+        </div>
+      </div>
+
+      {/* Product Card */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <img src={tree} alt="Product 11" className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold text-gray-900">SOLAR TREE</h3>
+          <p className="mt-2 text-gray-600">A solar-powered tree structure that captures sunlight efficiently to power urban utilities like charging stations and lighting. A perfect blend of technology and nature.</p>
+        </div>
+      </div>
+    </div>
+  </animated.div>
+</section>
+
+
+
+      {/* Testimonials Section */}
+   
+
+      {/* Reviews Section */}
+      <section id='reviews'>
+
+      <Review/>
+
+      </section>
+
+      {/* Past Works Section */}
+      <section id='pastworks'>
+        <PastWorks/>
+
+      </section>
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
       {/* Team section */}
       <section id="team" >
       
@@ -233,6 +394,16 @@ function Home() {
          
 
       </section>
+<<<<<<< HEAD
+=======
+      <section id="gallery" >
+      
+      
+      <Gallery/>
+         
+
+      </section>
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
 
       <div className="bg-gray-50 ">
       {/* Gallery Section */}
@@ -313,6 +484,12 @@ function Home() {
       <Contact/>
     </section>
 
+<<<<<<< HEAD
+=======
+    {/* FAQS SECTION */}
+    <FAQ/>
+
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
  {/* footer */}
  <section>
  <Footer/>

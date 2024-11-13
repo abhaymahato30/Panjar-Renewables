@@ -1,13 +1,32 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+=======
+import light from '../assets/About/light.jpg'
+import site from '../assets/About/site.jpg'
+import train from '../assets/About/train.jpg'
+import train2 from '../assets/About/train2.jpg'
+import install from '../assets/About/install.jpg'
+
+
+
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
 
 const AboutSlider = () => {
   // Array of images
   const images = [
+<<<<<<< HEAD
     "https://images.unsplash.com/photo-1508001300512-4763bb1c5583?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://plus.unsplash.com/premium_photo-1679917152396-4b18accacb9d?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1592016871124-4ca5fa965939?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://plus.unsplash.com/premium_photo-1679917152396-4b18accacb9d?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1592016871124-4ca5fa965939?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+=======
+    light,
+    site,
+    train,
+    train2,
+    install
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
   ];
 
   // State to track the current slide
@@ -37,9 +56,15 @@ const AboutSlider = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div id="default-carousel" className="relative w-full" data-carousel="slide">
       {/* Carousel wrapper */}
       <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+=======
+    <div id="default-carousel" className="relative w-full h-full" data-carousel="slide">
+      {/* Carousel wrapper */}
+      <div className="relative h-56 overflow-hidden rounded-lg md:h-full">
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
         {images.map((image, index) => (
           <div
             key={index}

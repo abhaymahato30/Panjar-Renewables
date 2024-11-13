@@ -1,5 +1,17 @@
 import React from "react";
 import "./Team.css"
+<<<<<<< HEAD
+=======
+import aditya from '../../assets/team/aditya.jpg'
+import manish from '../../assets/team/manish.jpg'
+import abhay from '../../assets/team/abhay.jpg'
+import anurag from '../../assets/team/anurag.jpg'
+import neha from '../../assets/team/neha.jpg'
+
+
+
+
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
 
 
 
@@ -11,7 +23,11 @@ const Core = () => {
     return (
       <>
         <div className="text-center">
+<<<<<<< HEAD
         <h2 className="text-4xl font-bold text-blue-600">Team</h2>
+=======
+        <h2 className="text-4xl font-bold text-blue-600">Our Team</h2>
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
 
         </div>
         {/*  */}
@@ -21,8 +37,12 @@ const Core = () => {
 
 
 <section class="bg-white dark:bg-gray-900">
+<<<<<<< HEAD
 <div class="container px-6  mx-auto">
     <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our Executive Team</h1>
+=======
+<div class="container px-6  mx-auto mt-12">
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
 
 
 
@@ -74,6 +94,7 @@ const data = [
 
   {
         "email": "princy.kumarijha@example.com",
+<<<<<<< HEAD
         "name": "Princy Kumari Jha",
         "batch": "2022-26",
         "teams": [
@@ -126,6 +147,52 @@ const data = [
         ],
         "linkedin": "#",
         "photo": "#"
+=======
+        "name": "Aditya kumar",
+        "batch": "2022-26",
+        "teams": [
+            "Founder"
+        ],
+        "linkedin": "https://www.linkedin.com/in/prinsu-panjar-aditya-8a10b3184/",
+        "photo": aditya
+    },   {
+        "email": "princy.kumarijha@example.com",
+        "name": "Neha Singh",
+        "batch": "2022-26",
+        "teams": [
+            "Finance and Accounting "
+        ],
+        "linkedin": "#",
+        "photo": neha
+    },  
+    {
+        "email": "princy.kumarijha@example.com",
+        "name": "Anurag Kumar",
+        "batch": "2022-26",
+        "teams": [
+            "Operational "
+        ],
+        "linkedin": "#",
+        "photo": anurag
+    },  {
+        "email": "princy.kumarijha@example.com",
+        "name": "Manish Kumar Mahato",
+        "batch": "2022-26",
+        "teams": [
+            "Design"
+        ],
+        "linkedin": "https://www.linkedin.com/in/manish-kumar-mahato-75946b264/",
+        "photo": manish
+    },   {
+        "email": "princy.kumarijha@example.com",
+        "name": "Abhay Kumar Mahato",
+        "batch": "2022-26",
+        "teams": [
+            "Development"
+        ],
+        "linkedin": "https://www.linkedin.com/in/abhay300804/",
+        "photo": abhay
+>>>>>>> 5b1c0c8 (Add existing project files prior to the push to GitHub.)
     }
    
 ]
