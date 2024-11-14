@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Review = () => {
-  // Review data
+  const reviewRef = useRef([]);
+
   const reviewData = [
     {
       quote: "I recently started using Panjar's solar dryer, and it’s been a game-changer for my farm. I can now dry produce quickly without depending on electricity, which is often unreliable in my area. It's cost-effective and easy to use, and it’s saving me so much money. Highly recommend it to other small farmers!",
@@ -42,13 +47,37 @@ const Review = () => {
  
   ];
 
+  useEffect(() => {
+    reviewRef.current.forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: index * 0.2,
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
     <section id="reviews" className="py-16 px-4 bg-gray-100">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-blue-600 mb-8">Customer Reviews</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviewData.map((review, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg p-6 space-y-4">
+            <div
+              key={index}
+              ref={(el) => (reviewRef.current[index] = el)}
+              className="review-card bg-white shadow-lg rounded-lg p-6 space-y-4"
+            >
               <p className="text-lg text-gray-600">
                 <span className="italic">"{review.quote}"</span>
               </p>

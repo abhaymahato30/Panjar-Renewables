@@ -1,43 +1,124 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import light from '../../assets/About/light.jpg'
-import site from '../../assets/About/site.jpg'
+
 import train from '../../assets/About/train.jpg'
-import train2 from '../../assets/About/train2.jpg'
-import install from '../../assets/About/install.jpg'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+
 const CompanyInfo = () => {
+  const imgRef1 = useRef(null);
+  const imgRef2 = useRef(null);
+  const text1 = useRef(null);
+  const text2 = useRef(null);
+  const text3 = useRef(null);
+  const text4 = useRef(null);
+
+
+
+
+  useEffect(() => {
+    // Animation for the first image
+    gsap.fromTo(
+      imgRef1.current,
+      { scale: 0.9, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: imgRef1.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    // Animation for the second image
+    gsap.fromTo(
+      text1.current,
+      { scale: 0.9, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger:   text1.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+     text2.current,
+      { scale: 0.9, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger:   text2.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    ); 
+    gsap.fromTo(
+      text4.current,
+       { scale: 0.9, opacity: 0 },
+       {
+         scale: 1,
+         opacity: 1,
+         duration: 1,
+         scrollTrigger: {
+           trigger:   text4.current,
+           start: "top 80%",
+           toggleActions: "play none none reverse",
+         },
+       }
+     ); 
+       gsap.fromTo(
+      text3.current,
+      { scale: 0.9, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger:  text3.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );  
+      gsap.fromTo(
+      imgRef2.current,
+      { scale: 0.9, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: imgRef2.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
   return (
     <section id="company-info" className="py-16 px-4 bg-gray-100">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
         
         {/* Left Column (Images stacked vertically) */}
         <div className="w-full md:w-1/2 flex flex-col space-y-8">
-          {/* Image 1 */}
-          <div className="overflow-hidden rounded-lg shadow-lg">
-            <img 
-              src={light}
-              alt="Project 1" 
-              className="w-full h-auto object-cover rounded-lg transform hover:scale-105 transition duration-300" 
-            />
+          <div className="overflow-hidden rounded-lg shadow-lg" ref={imgRef1}>
+            <img src={light} alt="Project 1" className="w-full h-auto object-cover rounded-lg" />
           </div>
-
-          {/* Image 2 */}
-          {/* <div className="overflow-hidden rounded-lg shadow-lg">
-            <img 
-              src={site}
-              alt="Project 2" 
-              className="w-full h-auto object-cover rounded-lg transform hover:scale-105 transition duration-300" 
-            />
-          </div> */}
-
-          {/* Image 3 */}
-          <div className="overflow-hidden rounded-lg shadow-lg">
-            <img 
-              src={train}
-              alt="Project 3" 
-              className="w-full h-auto object-cover rounded-lg transform hover:scale-105 transition duration-300" 
-            />
+          <div className="overflow-hidden rounded-lg shadow-lg" ref={imgRef2}>
+            <img src={train} alt="Project 3" className="w-full h-auto object-cover rounded-lg" />
           </div>
-          
         </div>
         
         {/* Right Column (Company Info) */}
@@ -45,7 +126,7 @@ const CompanyInfo = () => {
           <h2 className="text-3xl font-bold text-blue-600 mb-8 text-center md:text-left">About Panjar Renewable</h2>
 
           {/* Company Overview */}
-          <div className="mb-12">
+          <div className="mb-12" ref={text1}>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Company Overview</h3>
             <p className="text-lg text-gray-700">
               <span className="font-bold text-blue-600">Founded at the BIT Sindri Incubation Center</span>, 
@@ -59,7 +140,7 @@ const CompanyInfo = () => {
           </div>
 
           {/* Mission */}
-          <div className="mb-12">
+          <div className="mb-12" ref={text4}>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h3>
             <p className="text-lg text-gray-700">
               <span className="font-bold text-blue-600">To drive sustainable development</span> by designing and commercializing 
@@ -72,7 +153,7 @@ const CompanyInfo = () => {
           </div>
 
           {/* Vision */}
-          <div className="mb-12">
+          <div className="mb-12" ref={text2}>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Vision</h3>
             <p className="text-lg text-gray-700">
               <span className="font-bold text-blue-600">To be a leading provider of green energy solutions</span> in India, transforming 
@@ -84,7 +165,7 @@ const CompanyInfo = () => {
           </div>
 
           {/* Core Objectives */}
-          <div>
+          <div ref={text3}>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Core Objectives</h3>
             <ul className="text-lg text-gray-700 space-y-4 list-inside list-disc">
               <li><span className="font-bold text-blue-600">Enhance agricultural productivity</span> by developing solar-powered appliances specifically designed for farmers in rural areas.</li>

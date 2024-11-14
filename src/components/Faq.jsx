@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -129,6 +133,26 @@ const FAQ = () => {
     }
   ];
 
+  useEffect(() => {
+    // Adding GSAP ScrollTrigger for FAQ question animation
+    faqData.forEach((_, index) => {
+      gsap.fromTo(
+        `.faq-item-${index}`,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+         
+          scrollTrigger: {
+            trigger: `.faq-item-${index}`,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, [faqData]);
+
   return (
     <section id="faq" className="py-16 px-4 bg-gray-100">
       <div className="max-w-4xl mx-auto text-center">
@@ -136,7 +160,7 @@ const FAQ = () => {
 
         <div className="space-y-4">
           {faqData.map((item, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div key={index} className={`faq-item-${index} bg-white shadow-lg rounded-lg overflow-hidden`}>
               <div 
                 onClick={() => toggleAnswer(index)} 
                 className="flex justify-between items-center p-4 cursor-pointer transition duration-300 ease-in-out hover:bg-blue-50"

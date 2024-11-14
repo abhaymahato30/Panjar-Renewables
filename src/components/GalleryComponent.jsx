@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Import Swiper's CSS
+import 'swiper/css/autoplay'; // Import Swiper's Autoplay module
 import { animated } from 'react-spring'; // Assuming you're using react-spring for animations
 
 import g1 from '../assets/gallery/1.jpg';
@@ -19,31 +20,14 @@ import g14 from '../assets/gallery/14.jpg';
 import g15 from '../assets/gallery/15.jpg';
 import g16 from '../assets/gallery/16.jpg';
 
-
-
-
 const GalleryComponent = ({ galleryAnimation }) => {
   const swiperRef = useRef(null);
   const [swiperInstance, setSwiperInstance] = useState(null); // State to store Swiper instance
 
   // Example array of image URLs
   const images = [
-    g1 ,
-g2 ,
-g3, 
-g4 ,
-g5 ,
-
-g7 ,
-g8 ,
-g9 ,
-g10,
-g11,
-g12,
-g13,
-g14,
-g15,
-g16]
+    g1, g2, g3, g4, g5, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16
+  ];
 
   // This function will be triggered when the Swiper instance is initialized
   const onSwiperInit = (swiper) => {
@@ -86,7 +70,7 @@ g16]
             pagination={{ clickable: true }}
             loop={true} // Makes the carousel loop
             autoplay={{
-              delay: 3000, // 3 seconds for each slide
+              delay: 1000, // 1 seconds for each slide
               disableOnInteraction: false, // Keeps autoplay active after user interaction
             }}
             onSwiper={onSwiperInit} // Get the Swiper instance when it's initialized

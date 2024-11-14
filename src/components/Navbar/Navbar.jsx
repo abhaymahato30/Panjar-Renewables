@@ -1,7 +1,6 @@
-// src/components/Navbar.js
 import { useRef, useState } from "react";
-import { Link } from 'react-scroll' 
-import logo1 from "../../assets/general/Logo-3.png"
+import { Link } from 'react-scroll';
+import logo1 from "../../assets/general/Logo-3.png";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -10,86 +9,47 @@ function Navbar() {
 
   // Toggle mobile menu visibility
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-const container1 = useRef();
-const links = document.querySelectorAll('.link');
 
+  const container1 = useRef();
 
-
-  useGSAP(
-    () => {
-        // gsap code here...
-        gsap.from("nav img", { 
-
-        opacity:0,
-        y:-30,
-        
-        duration:1
-
-
-
-         }); 
-         
-         
-       
-    }
-); // <-- scope is for selector text (optional)
+  // GSAP animation for logo (initial fade in)
+  useGSAP(() => {
+    gsap.from("nav img", { opacity: 0, y: -30, duration: 1 });
+  });
 
   return (
-    <header className="bg-white z-20 fixed ">
-      <nav className="w-screen mx-auto px-16 py-0 flex justify-between items-center">
+    <header className="bg-gradient-to-r from-blue-200 via-green-200 to-green-600 z-20 fixed w-full top-0 shadow-lg">
+      <nav className="w-full mx-auto px-6  flex justify-between items-center text-white">
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <img src={logo1} alt="Logo" className="w-32 h-24 logo" />
-          {/* <span className="text-white text-2xl font-bold">panjar Ren</span> */}
         </div>
 
         {/* Desktop Navigation Links */}
         <div ref={container1} className="hidden md:flex space-x-10">
-          <Link
-            to="about" 
-            smooth={true} 
-            duration={300}
-            className="hover:text-blue-400 cursor-pointer"
-          >
+        <Link to="home" smooth={true} duration={300} className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105">
+           Home
+          </Link>
+          <Link to="about" smooth={true} duration={300} className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105">
             About
           </Link>
-          <Link
-            to="team" 
-            smooth={true} 
-            duration={300}
-            className="hover:text-blue-400 cursor-pointer"
-          >
+          <Link to="team" smooth={true} duration={300} className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105">
             Team
           </Link>
-          <Link
-          to="products"
-           smooth={true} 
-           duration={300}
-           className="hover:text-blue-400 cursor-pointer"
-          >
+          <Link to="products" smooth={true} duration={300} className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105">
             Products
           </Link>
-          <Link
-          to="reviews"
-           smooth={true} 
-           duration={300}
-           className="hover:text-blue-400 cursor-pointer"
-          >
+          <Link to="reviews" smooth={true} duration={300} className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105">
             Reviews
           </Link>
-          <Link
-          to="contact"
-           smooth={true} 
-           duration={300}
-           className="hover:text-blue-400 cursor-pointer"
-          >
+          <Link to="contact" smooth={true} duration={300} className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105">
             Contact
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-emerald-950"animated-
+          className="md:hidden text-white focus:outline-none"
           onClick={toggleMobileMenu}
         >
           <svg
@@ -99,68 +59,70 @@ const links = document.querySelectorAll('.link');
             stroke="currentColor"
             className="w-8 h-8"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </nav>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"} bg-white py-2 space-y-4`}
+        className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"} bg-gradient-to-r from-blue-900 via-green-800 to-indigo-900 z-20 py-6 space-y-6 border-t-2 border-gray-200 transition-all duration-300 ease-in-out flex flex-col justify-center items-center`}
+        style={{ padding: '10px' }}
       >
         <Link
-          to="/home"
-          className="text-cyan-950 animated-link text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          to="about"
+          smooth={true}
+          duration={300}
+          className="text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105"
+          onClick={() => setIsMobileMenuOpen(false)}
         >
-          Home
+         Home
         </Link>
-      
-    
         <Link
-            to="about" 
-            smooth={true} 
-            duration={300}
-            className="text-cyan-950 animated-link text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
-          >
-            About
-          </Link>
-          <Link
-            to="team" 
-            smooth={true} 
-            duration={300}
-            className="text-cyan-950 animated-link text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
-          >
-            Team
-          </Link>
-          <Link
+          to="about"
+          smooth={true}
+          duration={300}
+          className="text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          About
+        </Link>
+        <Link
+          to="team"
+          smooth={true}
+          duration={300}
+          className="text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Team
+        </Link>
+        <Link
           to="products"
-           smooth={true} 
-           duration={300}
-           className="text-cyan-950 animated-link text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
-          >
-            Products
-          </Link>
-          <Link
+          smooth={true}
+          duration={300}
+          className="text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Products
+        </Link>
+        <Link
           to="reviews"
-           smooth={true} 
-           duration={300}
-           className="text-cyan-950 animated-link text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
-          >
-            Reviews
-          </Link>
-          <Link
+          smooth={true}
+          duration={300}
+          className="text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Reviews
+        </Link>
+        <Link
           to="contact"
-           smooth={true} 
-           duration={300}
-           className="text-cyan-950 animated-link text-sm block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
-          >
-            Contact
-          </Link>
+          smooth={true}
+          duration={300}
+          className="text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Contact
+        </Link>
       </div>
     </header>
   );

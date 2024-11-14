@@ -1,37 +1,34 @@
-import React, { useState } from 'react';
-import a1 from '../assets/gallary/1.jpeg'
-import a2 from '../assets/gallary/2.jpeg'
-import a3 from '../assets/gallary/3.jpg'
-import a4 from '../assets/gallary/4.jpg'
-import a5 from '../assets/gallary/5.jpeg'
-import a6 from '../assets/gallary/6.jpeg'
-import a7 from '../assets/gallary/7.jpeg'
-import a8 from '../assets/gallary/8.jpg'
-import a9 from '../assets/gallary/9.jpg'
+import React, { useState, useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import a1 from '../assets/gallary/1.jpeg';
+import a2 from '../assets/gallary/2.jpeg';
+import a3 from '../assets/gallary/3.jpg';
+import a4 from '../assets/gallary/4.jpg';
+import a5 from '../assets/gallary/5.jpeg';
+import a6 from '../assets/gallary/6.jpeg';
+import a7 from '../assets/gallary/7.jpeg';
+import a8 from '../assets/gallary/8.jpg';
+import a9 from '../assets/gallary/9.jpg';
 
-
-
-
-// Example image sources (replace these with your actual image URLs)
-const images = [
-  { id: 1, src:a1 , alt: 'Newspaper 1' },
-  { id: 2, src:a2, alt: 'Certificate 1' },
-  { id: 3, src:a3, alt: 'Newspaper 2' },
-  { id: 4, src:a4, alt: 'Certificate 2' },
-  { id: 5, src:a5, alt: 'Newspaper 3' },
-  { id: 6, src:a6, alt: 'Certificate 3' },
-  { id: 7, src:a7, alt: 'Certificate 3' },
-  { id: 8, src:a8, alt: 'Certificate 3' },
-  { id: 9, src:a9, alt: 'Certificate 3' },
-
-
-
-  // Add more imas necessary
-];
+gsap.registerPlugin(ScrollTrigger);
 
 const Gallery = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
+  const galleryRef = useRef([]);
+
+  const images = [
+    { id: 1, src: a1, alt: 'Newspaper 1' },
+    { id: 2, src: a2, alt: 'Certificate 1' },
+    { id: 3, src: a3, alt: 'Newspaper 2' },
+    { id: 4, src: a4, alt: 'Certificate 2' },
+    { id: 5, src: a5, alt: 'Newspaper 3' },
+    { id: 6, src: a6, alt: 'Certificate 3' },
+    { id: 7, src: a7, alt: 'Certificate 3' },
+    { id: 8, src: a8, alt: 'Certificate 3' },
+    { id: 9, src: a9, alt: 'Certificate 3' },
+  ];
 
   // Open the modal with the clicked image
   const openModal = (src) => {
@@ -45,6 +42,26 @@ const Gallery = () => {
     setCurrentImage(null);
   };
 
+  useEffect(() => {
+    galleryRef.current.forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+       
+          delay: index * 0.1,
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
     <section id="gallery" className="py-16 px-4 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center">
@@ -53,9 +70,10 @@ const Gallery = () => {
 
         {/* Grid Layout for 3 Images Per Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((image) => (
+          {images.map((image, index) => (
             <div
               key={image.id}
+              ref={(el) => (galleryRef.current[index] = el)} // Add ref for animation
               className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               onClick={() => openModal(image.src)}
             >
