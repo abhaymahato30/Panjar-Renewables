@@ -19,6 +19,7 @@ import Review from '../components/Review';
 import PastWorks from '../components/PastWorks';
 import GalleryComponent from '../components/GalleryComponent'
 import Product from '../components/Product';
+import InfiniteScrollText from '../components/InfiniteScrollText';
 
 
 
@@ -77,6 +78,7 @@ function Home() {
         {/* <HeroTwo/> */}
         <section id='home'>
         <HeroSection/>
+        <InfiniteScrollText/>
 
 
         </section>
