@@ -80,11 +80,12 @@ const Core = () => {
 
   return (
     <>
+    
+
+      <section className="bg-white dark:bg-gray-900">
       <div className="text-center">
         <h2 className="text-4xl font-bold text-blue-600">Our Team</h2>
       </div>
-
-      <section className="bg-white dark:bg-gray-900">
         <div className="container px-6 py-6 mx-auto mt-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
             {data.map((d, index) => (

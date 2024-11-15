@@ -26,7 +26,7 @@ function Navbar() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div ref={container1} className="hidden md:flex space-x-10">
+        <div ref={container1} className="text-xl   hidden md:flex space-x-10">
         <Link to="home" smooth={true} duration={300} className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105">
            Home
           </Link>

@@ -54,7 +54,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-70"></div>
       <div className="relative z-10 text-right max-w-3xl w-full pr-4 sm:pr-12">
         <h1 ref={headingRef} className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 drop-shadow-2xl">
-          Powering Tomorrow, Today with Clean, Solar Energy
+        Empowering life with solar energy  
         </h1>
         <p ref={subheadingRef} className="mt-6 text-sm sm:text-lg md:text-2xl font-light italic text-white opacity-90 leading-relaxed">
           Elevating businesses with innovation, sustainability, and passion.
