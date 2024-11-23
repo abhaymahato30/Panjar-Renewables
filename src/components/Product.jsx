@@ -9,6 +9,9 @@ import dcsystem from '../assets/products/dcsystem.jpg'
 import distilator from '../assets/products/distilator.jpg'
 import dryer from '../assets/products/dryer.jpg'
 import eycycle from '../assets/products/eycycle.jpg'
+import cycle from '../assets/products/cycle.jpg'
+import lawn from '../assets/products/lawn.jpg'
+
 
 
 
@@ -351,7 +354,7 @@ const Product = () => {
     
         {/* Product Card */}
         <div ref={p6} className="product-card bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
-          <img src={eycycle} alt="Product 6" className="w-full h-64 object-cover" />
+          <img src={cycle} alt="Product 6" className="w-full h-64 object-cover" />
           <div className="p-6">
             <h3 className="text-2xl font-semibold text-gray-900">
               <span className="text-blue-600">EV CYCLE</span>
@@ -364,7 +367,7 @@ const Product = () => {
     
         {/* Product Card */}
         <div ref={p7} className="product-card bg-white shadow-lg rounded-lg overflow-hidden flex justify-center items-center flex-col transition-transform transform hover:scale-105 hover:shadow-2xl">
-          <img src={lawngrass} alt="Product 7" className="w-full h-64 object-cover" />
+          <img src={lawn} alt="Product 7" className="w-full h-64 object-cover" />
           <div className="p-6">
             <h3 className="text-2xl font-semibold text-gray-900">
               <span className="text-green-600">LAWN GRASS CUTTER</span>
