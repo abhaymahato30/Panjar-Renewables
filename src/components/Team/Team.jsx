@@ -39,23 +39,23 @@ const Core = () => {
       linkedin: "#",
       photo: anurag,
     },
-    {
-      email: "princy.kumarijha@example.com",
-      name: "Manish Kumar Mahato",
-      batch: "2022-26",
-      teams: ["Design"],
-      linkedin:
-        "https://www.linkedin.com/in/manish-kumar-mahato-75946b264/",
-      photo: manish,
-    },
-    {
-      email: "princy.kumarijha@example.com",
-      name: "Abhay Kumar Mahato",
-      batch: "2022-26",
-      teams: ["Development"],
-      linkedin: "https://www.linkedin.com/in/abhay300804/",
-      photo: abhay,
-    },
+    // {
+    //   email: "princy.kumarijha@example.com",
+    //   name: "Manish Kumar Mahato",
+    //   batch: "2022-26",
+    //   teams: ["Design"],
+    //   linkedin:
+    //     "https://www.linkedin.com/in/manish-kumar-mahato-75946b264/",
+    //   photo: manish,
+    // },
+    // {
+    //   email: "princy.kumarijha@example.com",
+    //   name: "Abhay Kumar Mahato",
+    //   batch: "2022-26",
+    //   teams: ["Development"],
+    //   linkedin: "https://www.linkedin.com/in/abhay300804/",
+    //   photo: abhay,
+    // },
   ];
 
   useEffect(() => {
@@ -87,7 +87,7 @@ const Core = () => {
         <h2 className="text-4xl font-bold text-blue-600">Our Team</h2>
       </div>
         <div className="container px-6 py-6 mx-auto mt-12">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
             {data.map((d, index) => (
               <div
                 key={index}
