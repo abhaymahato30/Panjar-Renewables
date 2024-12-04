@@ -43,10 +43,10 @@ const Core = () => {
     },
     {
       email: "princy.kumarijha@example.com",
-      name: "Shivanand Kumar",
+      name: "Shivanand Modi",
       batch: "2022-26",
       teams: ["Technical"],
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/shivanandmodi/",
       photo: shivanand,
     },
     // {

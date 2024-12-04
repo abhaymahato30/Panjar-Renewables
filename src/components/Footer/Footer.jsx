@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="col-md-4 mx-auto">
             {/* Content */}
             <h5 className="text-uppercase font-weight-bold mt-3 mb-4">
-              VISION OF THE INSTITUTE
+              VISION OF THE COMPANY
             </h5>
             <hr
               className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
@@ -41,7 +41,7 @@ const Footer = () => {
             />
              <Link
           to="home"
-          className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+          className="text-white animated-link text-md cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
         >
           Home
         </Link>
@@ -51,7 +51,7 @@ const Footer = () => {
             to="about" 
             smooth={true} 
             duration={300}
-            className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+            className="text-white animated-link text-md cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
           >
             About
           </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
             to="team" 
             smooth={true} 
             duration={300}
-            className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+            className="text-white animated-link text-md cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
           >
             Team
           </Link>
@@ -67,7 +67,7 @@ const Footer = () => {
           to="products"
            smooth={true} 
            duration={300}
-           className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+           className="text-white animated-link text-md cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
           >
             Products
           </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
           to="reviews"
            smooth={true} 
            duration={300}
-           className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+           className="text-white animated-link text-md cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
           >
             Reviews
           </Link>
@@ -83,7 +83,7 @@ const Footer = () => {
           to="contact"
            smooth={true} 
            duration={300}
-           className="text-white animated-link text-xl cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
+           className="text-white animated-link text-md cursor-pointer block hover:text-blue-200 transition duration-300 ease-in-out transform hover:scale-110"
           >
             Contact
           </Link>
@@ -91,13 +91,13 @@ const Footer = () => {
           <hr className="clearfix w-100 d-md-none" />
 
           <hr className="clearfix w-100 d-md-none" />
-          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-md">
             <h6 className="text-uppercase font-weight-bold">Contact</h6>
             <hr
               className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
               style={{ width: "60px" }}
             />
-            <p> 97/D, Usha Siddhi Kunj Vardhman Compound Lalpur, Ranchi, Jharkhand-834001
+            <p className="text-base"> 97/D, Usha Siddhi Kunj Vardhman Compound Lalpur, Ranchi, Jharkhand-834001
 
              BIT Sindri Dhanbad, Jharkhand JUT Namkum Ranchi, Jharkhand </p>
              <p>+91 9430649460</p>
