@@ -7,6 +7,8 @@ import manish from "../../assets/team/manish.jpg";
 import abhay from "../../assets/team/abhay.jpg";
 import anurag from "../../assets/team/anurag.jpg";
 import neha from "../../assets/team/neha.jpg";
+import shivanand from "../../assets/team/shivanand.jpg";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,6 +40,14 @@ const Core = () => {
       teams: ["Operational"],
       linkedin: "#",
       photo: anurag,
+    },
+    {
+      email: "princy.kumarijha@example.com",
+      name: "Shivanand Kumar",
+      batch: "2022-26",
+      teams: ["Technical"],
+      linkedin: "#",
+      photo: shivanand,
     },
     // {
     //   email: "princy.kumarijha@example.com",
@@ -87,7 +97,7 @@ const Core = () => {
         <h2 className="text-4xl font-bold text-blue-600">Our Team</h2>
       </div>
         <div className="container px-6 py-6 mx-auto mt-12">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
             {data.map((d, index) => (
               <div
                 key={index}

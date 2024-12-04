@@ -18,15 +18,15 @@ function Navbar() {
   });
 
   return (
-    <header className="bg-gradient-to-r from-blue-200 via-green-200 to-green-600 z-20 fixed w-full top-0 shadow-lg">
+    <header className="bg-slate-700 z-20 fixed w-full top-0 shadow-lg">
       <nav className="w-full mx-auto px-6  flex justify-between items-center text-white">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src={logo1} alt="Logo" className="w-32 h-24 logo" />
+          <img src={logo1} alt="Logo" className="w-24 h-18 logo" />
         </div>
 
         {/* Desktop Navigation Links */}
-        <div ref={container1} className="text-xl   hidden md:flex space-x-10">
+        <div ref={container1} className="text-   hidden md:flex space-x-10">
         <Link to="home" smooth={true} duration={300} className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105">
            Home
           </Link>
@@ -66,7 +66,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"} bg-gradient-to-r from-blue-900 via-green-800 to-indigo-900 z-20 py-6 space-y-6 border-t-2 border-gray-200 transition-all duration-300 ease-in-out flex flex-col justify-center items-center`}
+        className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"} bg-gray-900 z-20 py-6 space-y-6 border-t-2 border-gray-200 transition-all duration-300 ease-in-out flex flex-col justify-center items-center`}
         style={{ padding: '10px' }}
       >
         <Link
