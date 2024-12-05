@@ -45,7 +45,7 @@ const Core = () => {
       email: "princy.kumarijha@example.com",
       name: "Shivanand Modi",
       batch: "2022-26",
-      teams: ["Technical"],
+      teams: ["CTO"],
       linkedin: "https://www.linkedin.com/in/shivanandmodi/",
       photo: shivanand,
     },
@@ -105,7 +105,7 @@ const Core = () => {
                 className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group bg-slate-100 hover:bg-blue-600"
               >
                 <img
-                  className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                  className="object-cover w-40 h-40 rounded-full ring-4 ring-gray-300"
                   src={d.photo}
                   alt=""
                 />
