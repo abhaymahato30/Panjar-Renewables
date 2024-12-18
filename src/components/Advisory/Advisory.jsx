@@ -46,7 +46,7 @@ const Advisors = () => {
     },
     {
       email: "princy.kumarijha@example.com",
-      name: "Shivanand Modi",
+      name: "Ramesh yadav",
       batch: "2022-26",
       teams: ["Serial entrepreneur, charter member of TiE, mentor and professor of entrepreneurship"],
       linkedin: "https://www.linkedin.com/in/shivanandmodi/",
