@@ -92,9 +92,9 @@ const Core = () => {
     <>
     
 
-      <section className="bg-white dark:bg-gray-900">
-      <div className="text-center">
-        <h2 className="text-4xl font-bold text-blue-600">Our Team</h2>
+      <section className="bg-white dark:bg-gray-900 p-10">
+      <div className="text-center mt-16">
+        <h2 className="text-4xl font-bold text-blue-600 ">Our Team</h2>
       </div>
         <div className="container px-6 py-6 mx-auto mt-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">

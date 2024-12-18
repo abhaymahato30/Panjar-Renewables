@@ -20,6 +20,7 @@ import PastWorks from '../components/PastWorks';
 import GalleryComponent from '../components/GalleryComponent'
 import Product from '../components/Product';
 import InfiniteScrollText from '../components/InfiniteScrollText';
+import Advisors from '../components/Advisory/Advisory'; 
 
 
 
@@ -121,6 +122,14 @@ function Home() {
       
       
       <Team/>
+         
+
+      </section>
+       {/* Advisors section */}
+       <section id="advisors" >
+      
+      
+      <Advisors/>
          
 
       </section>

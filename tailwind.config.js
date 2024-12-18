@@ -9,6 +9,9 @@ export default {
       animation: {
         
       },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [],

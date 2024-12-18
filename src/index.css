@@ -1,3 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+/* Set the global styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    
+  }
+  /* WhatsApp Button Styles */
+.whatsapp-btn {
+    position: fixed; /* Fix the position at the bottom */
+    bottom: 40px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #25D366; /* WhatsApp Green Color */
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+    z-index: 9999; /* Ensure the button stays on top of other content */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .whatsapp-btn:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Increase shadow size on hover */
+  }
+  
+  /* WhatsApp Icon Inside the Button */
+  .whatsapp-btn img {
+    width: 60px; /* Size of the WhatsApp Icon */
+    height: 60px;
+  }
+  
+  /* Style for the custom cursor */
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;  /* Size of the cursor */
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 204, 0, 0.5));  /* Sun-like color effect */
+    pointer-events: none; /* Ensures the cursor doesn’t block interaction */
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px 10px rgba(255, 204, 0, 0.7); /* Glowing effect */
+    z-index: 9999; /* Ensures it's above all other elements */
+  }
+  /* Pulsing animation */
+  /* @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 15px 10px rgba(255, 204, 0, 0.6);
+    }
+    50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 25px 20px rgba(255, 204, 0, 0.8);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px 10px rgba(255, 204, 0, 0.6);
+    }
+  } */
+  
+
+/* Animation for jumping letters */
+@keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Adjust the jump height */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Styling for the heading letters */
+  h1 span {
+    display: inline-block;
+    opacity: 1;
+    animation: jump 0.6s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i)); /* Stagger the animation delay */
+  }
+  
+  /* Ensure the span elements are positioned inline */
+  h1 span {
+    display: inline-block;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  
