@@ -32,11 +32,11 @@ function Navbar() {
       </div>
 
       {/* Navbar */}
-      <header className="z-20 fixed w-full top-0 shadow-lg bg-yellow-700 mt-8"> {/* Change to bg-yellow-700 */}
+      <header className="z-20 fixed w-full top-0 shadow-lg bg-slate-900 mt-8"> {/* Change to bg-yellow-700 */}
         <nav className="w-full mx-auto px-6 flex justify-between items-center text-white py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src={logo1} alt="Logo" className="w-24 h-18 logo" />
+            <img src={logo1} alt="Logo" className="w-32 h-20 logo" />
           </div>
 
           {/* Desktop Navigation Links */}
