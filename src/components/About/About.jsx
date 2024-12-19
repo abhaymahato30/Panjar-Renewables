@@ -123,7 +123,7 @@ const CompanyInfo = () => {
         
         {/* Right Column (Company Info) */}
         <div className="w-full md:w-1/2 h-full md:pl-12 mt-8 md:mt-0">
-          <h2 className="text-3xl font-bold text-blue-600 mb-8 text-center md:text-left">About Panjar Renewable</h2>
+          <h2 className="text-3xl font-bold text-blue-600 mb-8 text-center md:text-left">About Panjar Renewables</h2>
 
           {/* Company Overview */}
           <div className="mb-12" ref={text1}>
@@ -135,7 +135,7 @@ const CompanyInfo = () => {
               <span className="font-medium text-gray-800"> solar technology</span>. The company's mission is to develop, design, and commercialize 
               <span className="font-bold text-blue-600"> solar appliances tailored for agricultural</span> and 
               <span className="font-bold text-blue-600"> small-scale industrial applications</span>, addressing specific needs in regions like 
-              <span className="font-medium text-gray-800"> Jharkhand and Bihar.</span>
+              <span className="font-medium text-gray-800"> Jharkhand ,Uttar Pradesh and Bihar.</span>
             </p>
           </div>
 

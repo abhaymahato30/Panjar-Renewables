@@ -4,7 +4,10 @@ import React, { useEffect, useRef } from "react";
 // import "./Team.css";
 import dk from "../../assets/advisor/dksingh.png";
 import vinod from "../../assets/advisor/vinod.jpg";
+import vinod2 from "../../assets/advisor/vinod2.jpg";
+
 import ramesh from "../../assets/advisor/ramesh.jpeg";
+
 
 
 import baba from "../../assets/advisor/baba.png";
@@ -22,7 +25,7 @@ const Advisors = () => {
   const data = [
     {
       email: "princy.kumarijha@example.com",
-      name: "Sidhnath Singh",
+      name: "Siddhi Nath Singh",
       batch: "2022-26",
       teams: ["Serial entrepreneur and renowned businessman in Jharkhand"],
       
@@ -51,6 +54,14 @@ const Advisors = () => {
       teams: ["Serial entrepreneur, charter member of TiE, mentor and professor of entrepreneurship"],
       linkedin: "https://www.linkedin.com/in/shivanandmodi/",
       photo: ramesh,
+    },
+    {
+      email: "princy.kumarijha@example.com",
+      name: "Vinod Rao",
+      batch: "2022-26",
+      teams: ["experience with Tesla & SpaceX"],
+      linkedin: "https://www.linkedin.com/in/shivanandmodi/",
+      photo: vinod2,
     },
 
   ];

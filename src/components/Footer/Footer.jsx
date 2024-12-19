@@ -97,9 +97,9 @@ const Footer = () => {
               className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
               style={{ width: "60px" }}
             />
-            <p className="text-base"> 97/D, Usha Siddhi Kunj Vardhman Compound Lalpur, Ranchi, Jharkhand-834001
+            <p className="text-base"> 97/D, Usha Siddhi Kunj Vardhman Compound Lalpur, Ranchi, Jharkhand-834001</p>
 
-             BIT Sindri Dhanbad, Jharkhand JUT Namkum Ranchi, Jharkhand </p>
+             <p className="mt-4">BIT Sindri Dhanbad, Jharkhand JUT Namkum Ranchi, Jharkhand </p>
              <p>+91 9430649460</p>
              <p>Panjarrenewables@gmail.com</p>
           </div>
