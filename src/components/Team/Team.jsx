@@ -96,7 +96,7 @@ const Core = () => {
     <>
     
 
-      <section className="bg-white dark:bg-gray-900 p-10">
+      <section className="bg-white dark:bg-gray-900 p-10 mt-44">
       <div className="text-center mt-16">
         <h2 className="text-4xl font-bold text-blue-600 ">Our Team</h2>
       </div>

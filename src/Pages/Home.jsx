@@ -87,11 +87,11 @@ function Home() {
       {/* Hero Section */}
     
 
-      {/* About Section */}
+      {/* About Section
       <section id="about">
       <About/>
 
-      </section>
+      </section> */}
 
 
       {/* Product Section */}
@@ -106,41 +106,41 @@ function Home() {
    
 
       {/* Reviews Section */}
-      <section id='reviews'>
+      {/* <section id='reviews'>
 
       <Review/>
 
-      </section>
+      </section> */}
 
       {/* Past Works Section */}
-      <section id='pastworks'>
+      {/* <section id='pastworks'>
         <PastWorks/>
 
-      </section>
+      </section> */}
       {/* Team section */}
-      <section id="team" >
+      {/* <section id="team" >
       
       
       <Team/>
          
 
-      </section>
+      </section> */}
        {/* Advisors section */}
-       <section id="advisors" >
+       {/* <section id="advisors" >
       
       
       <Advisors/>
          
 
-      </section>
-      <section id="recoginition" >
+      </section> */}
+      {/* <section id="recoginition" >
       
       
       <Gallery/>
          
 
-      </section>
-      <section id="gallery" >
+      </section> */}
+      {/* <section id="gallery" >
       
       
       <GalleryComponent
@@ -152,26 +152,26 @@ function Home() {
       />
          
 
-      </section>
+      </section> */}
 
-      <div className="bg-gray-50 ">
+      {/* <div className="bg-gray-50 "> */}
       {/* Gallery Section */}
     
-    </div>
+    {/* </div> */}
     {/* contact section  */}
-    <section id='contact'>
+    {/* <section id='contact'> */}
 
-      <Contact/>
-    </section>
+      {/* <Contact/> */}
+    {/* </section> */}
 
     {/* FAQS SECTION */}
     <FAQ/>
 
  {/* footer */}
- <section>
+ {/* <section>
  <Footer/>
 
- </section>
+ </section> */}
 
     </div>
   );

@@ -108,7 +108,7 @@ const CompanyInfo = () => {
     );
   }, []);
   return (
-    <section id="company-info" className="py-16 px-4 bg-gray-100">
+    <section id="company-info" className="py-16 mt-40 px-4 bg-gray-100">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
         
         {/* Left Column (Images stacked vertically) */}

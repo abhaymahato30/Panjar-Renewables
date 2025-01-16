@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import logo1 from "../../assets/general/Logo-3.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -42,7 +42,7 @@ function Navbar() {
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-12 text-lg font-medium font-sans tracking-wide uppercase">
             <Link
-              to="home"
+              to="/"
               smooth={true}
               duration={300}
               className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -50,7 +50,7 @@ function Navbar() {
               Home
             </Link>
             <Link
-              to="about"
+              to="/about"
               smooth={true}
               duration={300}
               className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -58,7 +58,7 @@ function Navbar() {
               About
             </Link>
             <Link
-              to="team"
+              to="/team"
               smooth={true}
               duration={300}
               className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -66,7 +66,7 @@ function Navbar() {
               Team
             </Link>
             <Link
-              to="products"
+              to="/products"
               smooth={true}
               duration={300}
               className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -74,7 +74,7 @@ function Navbar() {
               Products
             </Link>
             <Link
-              to="reviews"
+              to="/review"
               smooth={true}
               duration={300}
               className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -82,7 +82,7 @@ function Navbar() {
               Reviews
             </Link>
             <Link
-              to="contact"
+              to="/contact"
               smooth={true}
               duration={300}
               className="hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"

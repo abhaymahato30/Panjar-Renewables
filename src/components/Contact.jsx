@@ -77,7 +77,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="min-h-screen bg-gray-800 py-20 px-4">
+    <section id="contact" className="min-h-screen bg-gray-800 py-20 px-4 mt-40">
       <div className="max-w-screen-lg mx-auto text-center">
         {/* Title with Colorful Gradient */}
         <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-red-500 to-pink-600 mb-12">

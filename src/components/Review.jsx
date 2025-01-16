@@ -47,28 +47,10 @@ const Review = () => {
  
   ];
 
-  useEffect(() => {
-    reviewRef.current.forEach((el, index) => {
-      gsap.fromTo(
-        el,
-        { y: 100, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: index * 0.2,
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      );
-    });
-  }, []);
+ 
 
   return (
-    <section id="reviews" className="py-16 px-4 bg-gray-100">
+    <section id="reviews" className="py-16 mt-40 px-4 bg-gray-100">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-blue-600 mb-8">Customer Reviews</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
