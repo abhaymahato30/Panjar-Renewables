@@ -8,17 +8,19 @@ import TeamPage from './Pages/TeamPage';
 import ProductPage from './Pages/ProductPage'
 import AboutPage from './Pages/AboutPage'
 import ReviewPage from './Pages/ReviewPage'
-
+import ScrollTop from './components/ScrollTop'
 
 import Advisors from './components/Advisory/Advisory';
 import Footer from './components/Footer/Footer';
 import ContactPage from './Pages/ContactPage';
+import Policy from './Pages/Policy'
 
 function App() {
 
   return (
 
     <Router>
+      <ScrollTop/>
        
       <Navbar />
       <main>
@@ -30,6 +32,8 @@ function App() {
           <Route path="/products" element={<ProductPage/>} />
           <Route path="/review" element={<ReviewPage/>} />
           <Route path="/contact" element={<ContactPage/>} />
+          <Route path="/policy" element={<Policy/>} />
+
 
 
 

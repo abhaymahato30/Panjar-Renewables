@@ -119,7 +119,7 @@ function Navbar() {
           style={{ padding: "10px" }}
         >
           <Link
-            to="home"
+            to="/home"
             smooth={true}
             duration={300}
             className="text-lg font-medium font-sans text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -128,7 +128,7 @@ function Navbar() {
             Home
           </Link>
           <Link
-            to="about"
+            to="/about"
             smooth={true}
             duration={300}
             className="text-lg font-medium font-sans text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -137,7 +137,7 @@ function Navbar() {
             About
           </Link>
           <Link
-            to="team"
+            to="/team"
             smooth={true}
             duration={300}
             className="text-lg font-medium font-sans text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -146,7 +146,7 @@ function Navbar() {
             Team
           </Link>
           <Link
-            to="products"
+            to="/products"
             smooth={true}
             duration={300}
             className="text-lg font-medium font-sans text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -155,7 +155,7 @@ function Navbar() {
             Products
           </Link>
           <Link
-            to="reviews"
+            to="/review"
             smooth={true}
             duration={300}
             className="text-lg font-medium font-sans text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
@@ -164,7 +164,7 @@ function Navbar() {
             Reviews
           </Link>
           <Link
-            to="contact"
+            to="/contact"
             smooth={true}
             duration={300}
             className="text-lg font-medium font-sans text-white hover:text-yellow-400 cursor-pointer transition duration-300 transform hover:scale-105 hover:underline"
