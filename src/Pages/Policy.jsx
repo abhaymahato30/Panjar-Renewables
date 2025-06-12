@@ -167,7 +167,7 @@ export default function PolicyPage() {
         </nav>
       </footer>
     </div>
-    <Footer/>
+    
     </>
   );
 }
