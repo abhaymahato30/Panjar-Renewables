@@ -4,6 +4,25 @@ import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 
 const sections = [
+    {
+    id: 'terms-conditions',
+    title: 'Terms & Conditions',
+    content: (
+      <>
+        <p>Last updated: June 1, 2025</p>
+        <p>
+          Welcome to Panjar Renewables. By using our website, you agree to comply with
+          these Terms & Conditions (“Terms”). Use our services for lawful purposes only.
+        </p>
+        <ul className="list-disc list-inside space-y-2">
+          <li>All intellectual property (text, graphics, logos) is owned by Panjar Renewables.</li>
+          <li>You will not misuse or interfere with our website or servers.</li>
+          <li>We reserve the right to modify or discontinue services at any time.</li>
+          <li>Disputes are governed under the laws of India, and resolved in courts of India.</li>
+        </ul>
+      </>
+    ),
+  },
   {
     id: 'privacy-policy',
     title: 'Privacy Policy',
@@ -117,7 +136,7 @@ export default function PolicyPage() {
     <div className="min-h-screen bg-gray-50 mt-36">
       <header className="bg-blue-900 text-white py-6">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-semibold">PANJER Renewables</h1>
+          <h1 className="text-3xl font-semibold">Panjar Renewables</h1>
           <p className="text-sm mt-1">Policies & Legal Information</p>
         </div>
       </header>
@@ -133,7 +152,7 @@ export default function PolicyPage() {
 
       <footer className="bg-gray-100 text-center py-6">
         <p className="text-sm text-gray-600">
-          © {new Date().getFullYear()} PANJER Renewables. All rights reserved.
+          © {new Date().getFullYear()} Panjar Renewables. All rights reserved.
         </p>
         <nav className="space-x-4 mt-2">
           {sections.map((s) => (
