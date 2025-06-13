@@ -14,7 +14,8 @@ import Advisors from './components/Advisory/Advisory';
 import Footer from './components/Footer/Footer';
 import ContactPage from './Pages/ContactPage';
 import Policy from './Pages/Policy'
-
+import CancellationPage from './Pages/cancellationRefund';
+import TermandCondition from './Pages/Term&Condition';
 function App() {
 
   return (
@@ -33,6 +34,10 @@ function App() {
           <Route path="/review" element={<ReviewPage/>} />
           <Route path="/contact" element={<ContactPage/>} />
           <Route path="/policy" element={<Policy/>} />
+          <Route path="/cancellation" element={<CancellationPage/>} />
+          <Route path="/t&c" element={<TermandCondition/>} />
+
+
 
 
 

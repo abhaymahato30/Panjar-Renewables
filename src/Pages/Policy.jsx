@@ -1,48 +1,25 @@
 // PolicyPage.jsx
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
 
 const sections = [
-    {
-    id: 'terms-conditions',
-    title: 'Terms & Conditions',
+     {
+    id: 'cancellation-refund',
+    title: 'Cancellation & Refund Policy',
     content: (
       <>
-        <p>Last updated: June 1, 2025</p>
-        <p>
-          Welcome to Panjar Renewables. By using our website, you agree to comply with
-          these Terms & Conditions (“Terms”). Use our services for lawful purposes only.
-        </p>
         <ul className="list-disc list-inside space-y-2">
-          <li>All intellectual property (text, graphics, logos) is owned by Panjar Renewables.</li>
-          <li>You will not misuse or interfere with our website or servers.</li>
-          <li>We reserve the right to modify or discontinue services at any time.</li>
-          <li>Disputes are governed under the laws of India, and resolved in courts of India.</li>
+          <li>Orders may be canceled within 24 hours of placement.</li>
+          <li>Returns accepted within 15 days of delivery if items are unused and in original packaging :contentReference</li>
+          <li>Refunds issued via original payment method within 7 business days of receiving returned goods :contentReference</li>
+          <li>Shipping charges are non-refundable unless the return is due to our error.</li>
+          <li>No refunds for customized, perishable, or clearance items unless faulty.</li>
         </ul>
       </>
     ),
   },
-  {
-    id: 'privacy-policy',
-    title: 'Privacy Policy',
-    content: (
-      <>
-        <p>
-          We respect your privacy and handle your personal data responsibly.
-          We collect information such as name, email, IP address, browser
-          details, and interaction logs.
-        </p>
-        <p>
-          We use this data to improve our services, communicate with you, and
-          comply with legal obligations. Data is shared only with trusted
-          providers or as required by law. We implement standard security
-          measures to protect your data and retain it only as long as
-          necessary.
-        </p>
-      </>
-    ),
-  },
+ 
+
   {
     id: 'cookies-policy',
     title: 'Cookies Policy',
@@ -71,21 +48,7 @@ const sections = [
       </>
     ),
   },
-  {
-    id: 'cancellation-refund',
-    title: 'Cancellation & Refund Policy',
-    content: (
-      <>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Orders may be canceled within 24 hours of placement.</li>
-          <li>Returns accepted within 15 days of delivery if items are unused and in original packaging :contentReference</li>
-          <li>Refunds issued via original payment method within 7 business days of receiving returned goods :contentReference</li>
-          <li>Shipping charges are non-refundable unless the return is due to our error.</li>
-          <li>No refunds for customized, perishable, or clearance items unless faulty.</li>
-        </ul>
-      </>
-    ),
-  },
+
   {
     id: 'disclaimer',
     title: 'Disclaimer',
